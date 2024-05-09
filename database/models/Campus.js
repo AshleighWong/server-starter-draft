@@ -10,17 +10,27 @@ const db = require('../db');  // Import Sequelize database instance called "db"
 const Campus = db.define("campus", {
   name: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
   },
+
 
   address: {
     type: Sequelize.STRING,
     allowNull: false
   },
 
+
   description: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
+    allowNull: true
+  },
+
+
+  imageUrl: {
+    allowNull: true,
+    defaultValue: 'school.jpeg'
   }
+
 });
 
 // Export the campus model
