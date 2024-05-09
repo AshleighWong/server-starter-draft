@@ -9,13 +9,19 @@ const db = require('../db');  // Import Sequelize database instance called "db"
 const Student = db.define("student", {
   firstname: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+    }
   },
 
 
   lastname: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+    }
   },
 
 
@@ -23,12 +29,14 @@ const Student = db.define("student", {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
+      notEmpty: true,
       isEmail: true
     }
   },
 
 
   imageUrl: {
+    type: Sequelize.STRING,
     allowNull: true,
     defaultValue: 'school.jpeg'
   },
