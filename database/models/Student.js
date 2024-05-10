@@ -38,7 +38,7 @@ const Student = db.define("student", {
   imageUrl: {
     type: Sequelize.STRING,
     allowNull: true,
-    defaultValue: 'school.jpeg'
+    defaultValue: 'https://www.greatneck.k12.ny.us/cms/lib/NY02208059/Centricity/ModuleInstance/15004/sunset%20at%20north.jpeg'
   },
 
 
