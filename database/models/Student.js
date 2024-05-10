@@ -43,7 +43,7 @@ const Student = db.define("student", {
 
 
   gpa: {
-    type: Sequelize.DECIMAL(2,1),
+    type: Sequelize.DECIMAL(3,1),
     allowNull: true,
     validate: {
       min: 0.0,
